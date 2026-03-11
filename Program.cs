@@ -55,14 +55,35 @@ namespace Mapping
             var dto2 = mapper.Map<EmployeeDto>(emp2);
             Console.WriteLine(dto2.Id + " " + dto2.Name + " " + dto2.Title + " " + dto2.Description);
         }
+        //tehke mappimine juurde ja teemaks on autod
+        //peate kaks classi tegema nimega car ja Cardto
     }
 }
 
+    public class Car
+    {
+        public int Id { get; set; }
+        public string CarName { get; set; } = string.Empty;
+        public string CarDescription { get; set; } = string.Empty;
+        public string CarTitle { get; set; } = string.Empty;
 
-    //programm.cs on tegemist failiga kus on program class ja
-    //nüüd oleme lisanud juurde Employee clasii
-    //kindlasti tuleb järgida; et class ei oleks classi sees
-    public class Employee
+    }
+    public class CarDto
+    {
+        public int Id { get; set; }
+        public string CarName { get; set; } = string.Empty;
+        public string CarDescription { get; set; } = string.Empty;
+        public string CarTitle { get; set; } = string.Empty;
+
+    }
+
+
+
+
+//programm.cs on tegemist failiga kus on program class ja
+//nüüd oleme lisanud juurde Employee clasii
+//kindlasti tuleb järgida; et class ei oleks classi sees
+public class Employee
     {
         public int Id { get; set; }
         public string Name { get; set; } = string.Empty;
